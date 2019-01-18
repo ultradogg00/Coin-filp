@@ -12,12 +12,22 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var headOrTails: UILabel!
     
+  var fliped = ["Head", "Talis"]
+    var randomNumber : Int = 1
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+     func pickRandomNumber(){
+        let num = Int(arc4random_uniform(2))
+        
+        return num
+    }
+    
+    
     
     
     
@@ -25,7 +35,29 @@ class ViewController: UIViewController {
     
     
     @IBAction func buttonToFlip(_ sender: UIButton) {
+        
+        randomNumber = pickRandomNumber()
+        
+        headOrTails.text = "\(randomNumber)"
+        
+        print(randomNumber)
+        
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
