@@ -18,27 +18,16 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-     func pickRandomNumber(){
-        let num = Int(arc4random_uniform(2))
         
-        return num
+        
     }
-    
-    
-    
-    
-    
-    
-    
     
     @IBAction func buttonToFlip(_ sender: UIButton) {
+         let num = Int(arc4random_uniform(2))
+
+        randomNumber = num
         
-        randomNumber = pickRandomNumber()
-        
-        headOrTails.text = "\(randomNumber)"
+        headOrTails.text = fliped[num]
         
         print(randomNumber)
         
